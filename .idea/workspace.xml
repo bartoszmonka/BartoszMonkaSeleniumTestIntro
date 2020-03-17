@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="21370d6e-10e5-4ce0-8927-ebfd84a66d2d" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Kotlin File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ZAcEK9SQvL7apBkBIrbtkKY9O8" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../BartoszMonkaSeleniumIntroCzysty" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RunManager" selected="TestNG.C:/IdeaProjects/BartoszMonkaSeleniumIntro/src/test/resources/all_tests_suite.xml">
+    <configuration name="C:/IdeaProjects/BartoszMonkaSeleniumIntro/src/test/resources/all_tests_suite.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="BartoszMonkaSeleniumIntro" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/all_tests_suite.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FailedLoginTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="BartoszMonkaSeleniumIntro" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.FailedLoginTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PositiveLoginTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="BartoszMonkaSeleniumIntro" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.PositiveLoginTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="tests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="BartoszMonkaSeleniumIntro" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="TEST_OBJECT" value="PACKAGE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.C:/IdeaProjects/BartoszMonkaSeleniumIntro/src/test/resources/all_tests_suite.xml" />
+        <item itemvalue="TestNG.PositiveLoginTests" />
+        <item itemvalue="TestNG.FailedLoginTests" />
+        <item itemvalue="TestNG.tests" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="21370d6e-10e5-4ce0-8927-ebfd84a66d2d" name="Default Changelist" comment="" />
+      <created>1584285225630</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584285225630</updated>
+      <workItem from="1584285229247" duration="14860000" />
+      <workItem from="1584369113223" duration="17956000" />
+      <workItem from="1584430644593" duration="6225000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2125" y="319" key="#Project_Structure" timestamp="1584288778520">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="2125" y="319" key="#Project_Structure/0.0.3440.1400@0.0.3440.1400" timestamp="1584288778520" />
+    <state x="2343" y="513" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584299218501">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="2343" y="513" key="#com.intellij.fileTypes.FileTypeChooser/0.0.3440.1400@0.0.3440.1400" timestamp="1584299218501" />
+    <state x="2260" y="633" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1584376874678">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="2260" y="633" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.3440.1400@0.0.3440.1400" timestamp="1584376874678" />
+    <state x="661" y="572" width="398" height="266" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1584377722720">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="661" y="572" width="398" height="266" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.3440.1400@0.0.3440.1400" timestamp="1584377722720" />
+    <state x="724" y="456" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1584432766377">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="724" y="456" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.3440.1400@0.0.3440.1400" timestamp="1584432766377" />
+    <state x="705" y="490" key="FileChooserDialogImpl" timestamp="1584432686343">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="705" y="490" key="FileChooserDialogImpl/0.0.3440.1400@0.0.3440.1400" timestamp="1584432686343" />
+    <state width="1822" height="233" key="GridCell.Tab.0.bottom" timestamp="1584438143973">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state width="1822" height="233" key="GridCell.Tab.0.bottom/0.0.3440.1400@0.0.3440.1400" timestamp="1584438143973" />
+    <state width="1822" height="233" key="GridCell.Tab.0.center" timestamp="1584438143973">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state width="1822" height="233" key="GridCell.Tab.0.center/0.0.3440.1400@0.0.3440.1400" timestamp="1584438143973" />
+    <state width="1822" height="233" key="GridCell.Tab.0.left" timestamp="1584438143973">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state width="1822" height="233" key="GridCell.Tab.0.left/0.0.3440.1400@0.0.3440.1400" timestamp="1584438143973" />
+    <state width="1822" height="233" key="GridCell.Tab.0.right" timestamp="1584438143973">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state width="1822" height="233" key="GridCell.Tab.0.right/0.0.3440.1400@0.0.3440.1400" timestamp="1584438143973" />
+    <state x="702" y="534" key="com.intellij.ide.util.TipDialog" timestamp="1584430644806">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="702" y="534" key="com.intellij.ide.util.TipDialog/0.0.3440.1400@0.0.3440.1400" timestamp="1584430644806" />
+    <state x="1718" y="0" width="1495" height="1055" key="dock-window-1" timestamp="1584433326486">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="1718" y="0" width="1495" height="1055" key="dock-window-1/0.0.3440.1400@0.0.3440.1400" timestamp="1584433326486" />
+    <state x="774" y="0" width="1495" height="1047" key="dock-window-2" timestamp="1584437089012">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="774" y="0" width="1495" height="1047" key="dock-window-2/0.0.3440.1400@0.0.3440.1400" timestamp="1584437089012" />
+    <state x="663" y="348" width="586" height="732" key="find.popup" timestamp="1584392956593">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="663" y="348" width="586" height="732" key="find.popup/0.0.3440.1400@0.0.3440.1400" timestamp="1584392956593" />
+    <state x="650" y="336" key="run.anything.popup" timestamp="1584432542938">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="650" y="336" key="run.anything.popup/0.0.3440.1400@0.0.3440.1400" timestamp="1584432542938" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/BartoszMonkaSeleniumIntro$FailedLoginTests.ic" NAME="FailedLoginTests Coverage Results" MODIFIED="1584394840778" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>tests.*</FILTER>
+    </SUITE>
+  </component>
+</project>
