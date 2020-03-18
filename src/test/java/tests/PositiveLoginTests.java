@@ -10,25 +10,24 @@ import utils.testng.listeners.RetryAnalyzer;
 
 import static navigation.ApplicationURLs.LOGIN_URL;
 import static org.testng.AssertJUnit.assertEquals;
+import static org.testng.AssertJUnit.assertTrue;
 
 public class PositiveLoginTests extends TestBase {
 
     @Severity(SeverityLevel.BLOCKER)
     @Test(retryAnalyzer = RetryAnalyzer.class)
-    @Description("The goal of this test is to log in using proper username and password" +
-            " and check if information - MY ACCOUNT is displayed after")
+    @Description("Steps to log in using correct user email and password" +
+            " check information - MY ACCOUNT is displayed after, and click sign out")
+
     public void asUserLoginUsingValidLoginAndPassword() {
         DriverUtils.navigateToPage(LOGIN_URL);
 
         LoginPage loginPage = new LoginPage();
-        loginPage
-                .typeIntoUserNameField("testMail88@gmail.com")
-                .typeIntoPasswordField("JanGate")
-                .clickOnLoginButton();
-
-        String myAccountText = loginPage.getMyAccount();
-        assertEquals(myAccountText, "MY ACCOUNT");
+        loginPage.typeIntoUserNameField();
+        loginPage.typeIntoPasswordField();
+        loginPage.clickOnLoginButton();
+        loginPage.signOutClick();
+        loginPage.checkCorrectSignOut();
     }
-
 }
 
