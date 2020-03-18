@@ -23,12 +23,11 @@ public class PositiveLoginTests extends TestBase {
         DriverUtils.navigateToPage(LOGIN_URL);
 
         LoginPage loginPage = new LoginPage();
-        loginPage.typeIntoUserNameField();
+        loginPage.typeIntoUserEmailField();
         loginPage.typeIntoPasswordField();
         loginPage.clickOnLoginButton();
         loginPage.signOutClick();
         loginPage.checkCorrectSignOut();
     }
-
 }
 
