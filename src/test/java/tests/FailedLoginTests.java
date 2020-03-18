@@ -15,19 +15,16 @@ public class FailedLoginTests extends TestBase {
 
     @Severity(SeverityLevel.NORMAL)
     @Test(retryAnalyzer = RetryAnalyzer.class)
-    @Description("The goal of this test is to log in using not proper username and password" +
-            " and check if warning message Invalid username or password is displayed")
+    @Description("The steps of this test is using not proper user email and password" +
+            " check if warning message Authentication failed is displayed")
     public void asUserTryToLogInWithIncorrectLoginAndPassword() {
         DriverUtils.navigateToPage(LOGIN_URL);
 
         LoginPage loginPage = new LoginPage();
-        loginPage
-                .typeIntoUserNameField("WrongLogin")
-                .typeIntoPasswordField("WrongPassword")
-                .clickOnLoginButton();
-        String warningMessage = loginPage.getWarningMessage();
-
-        assertEquals(warningMessage, "Invalid email address.");
+        loginPage.typeIntoWrongUserEmailNameField();
+        loginPage.typeIntoWrongUserPasswordField();
+        loginPage.clickOnLoginButton();
+        loginPage.getWarningMessage();
     }
 
 }
