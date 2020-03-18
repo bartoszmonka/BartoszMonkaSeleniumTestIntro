@@ -20,6 +20,8 @@ public class LoginPage {
     String userPassword ="JanGate";
     String userWrongEmail ="wrongpwd42@gmail.com";
     String userWrongPassword ="WrongWrong";
+    String userInvalidEmail ="invalidEmail@@gmy.pl";
+    String emptyField =" ";
 
     @FindBy(id = "email")
     private WebElement emailField;
@@ -45,10 +47,31 @@ public class LoginPage {
     }
 
     @Step("Type into User Name Field {username}")
-    public void typeIntoUserNameField() {
+    public void typeIntoUserEmailField() {
         WaitForElement.waitUntilElementIsVisible(emailField);
         emailField.sendKeys(userEmail);
-        logger.info("Typed into User Name Field {}", userEmail);
+        logger.info("Typed into user email Name Field {}", userEmail);
+    }
+
+    @Step("Type into User Name Field {username}")
+    public void typeIntoUserEmailEmptyField() {
+        WaitForElement.waitUntilElementIsVisible(emailField);
+        emailField.sendKeys(emptyField);
+        logger.info("Typed into user email empty Field {}", emptyField);
+    }
+
+    @Step("Type into User Name Field {username}")
+    public void typeIntoWrongUserEmailNameField() {
+        WaitForElement.waitUntilElementIsVisible(emailField);
+        emailField.sendKeys(userWrongEmail);
+        logger.info("Typed into wrong user email Field {}", userWrongEmail);
+    }
+
+    @Step("Type into User Name Field {username}")
+    public void typeIntoInvalidUserEmailNameField() {
+        WaitForElement.waitUntilElementIsVisible(emailField);
+        emailField.sendKeys(userInvalidEmail);
+        logger.info("Typed into User Name Field {}", userInvalidEmail);
     }
 
     @Step("Type into Password Field {password}")
@@ -58,18 +81,18 @@ public class LoginPage {
         logger.info("Typed into Password Field {}", userPassword);
     }
 
-    @Step("Type into User Name Field {username}")
-    public void typeIntoWrongUserEmailNameField() {
-        WaitForElement.waitUntilElementIsVisible(emailField);
-        emailField.sendKeys(userWrongEmail);
-        logger.info("Typed into User Name Field {}", userWrongEmail);
-    }
-
     @Step("Type into Password Field {password}")
     public void typeIntoWrongUserPasswordField() {
         passwordField.clear();
         passwordField.sendKeys(userWrongPassword);
         logger.info("Typed into Password Field {}", userWrongPassword);
+    }
+
+    @Step("Type into EmptyField Password Field {password}")
+    public void typeIntoEmptyFieldUserPassword() {
+        passwordField.clear();
+        passwordField.sendKeys(emptyField);
+        logger.info("Typed into Password Field {}", emailField);
     }
 
     @Step("Click on Login Button")
@@ -79,11 +102,35 @@ public class LoginPage {
     }
 
     @Step("Getting warning message from Login Page")
-    public void getWarningMessage() {
+    public void getAuthenticationMessage() {
         WaitForElement.waitUntilElementIsVisible(messageLabel);
         String warningText = messageLabel.getText();
         logger.info("Returned warning message was: {}", warningText);
         AssertJUnit.assertEquals(warningText, "Authentication failed.");
+    }
+
+    @Step("Getting Invalid email message from Login Page")
+    public void getInvalidEmailMessage() {
+        WaitForElement.waitUntilElementIsVisible(messageLabel);
+        String warningText = messageLabel.getText();
+        logger.info("Returned warning message was: {}", warningText);
+        AssertJUnit.assertEquals(warningText, "Invalid email address.");
+    }
+
+    @Step("Getting Password is required from Login Page")
+    public void getPasswordIsRequiredMessage() {
+        WaitForElement.waitUntilElementIsVisible(messageLabel);
+        String warningText = messageLabel.getText();
+        logger.info("Returned warning message was: {}", warningText);
+        AssertJUnit.assertEquals(warningText, "Password is required.");
+    }
+
+    @Step("Getting An email address is required from Login Page")
+    public void getEmailAddressIsRequiredMessage() {
+        WaitForElement.waitUntilElementIsVisible(messageLabel);
+        String warningText = messageLabel.getText();
+        logger.info("Returned warning message was: {}", warningText);
+        AssertJUnit.assertEquals(warningText, "An email address required.");
     }
 
     @Step("Getting MY ACCOUNT information from Login Page")
@@ -93,6 +140,7 @@ public class LoginPage {
         logger.info("Returned MY ACCOUNT: {}", myAccountText);
         assertEquals(myAccountText, "MY ACCOUNT");
     }
+
     @Step("Click Sign Out from Login Page")
     public void signOutClick(){
         signOut.click();
