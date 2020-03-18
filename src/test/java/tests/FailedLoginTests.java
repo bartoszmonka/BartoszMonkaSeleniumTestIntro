@@ -25,7 +25,6 @@ public class FailedLoginTests extends TestBase {
         loginPage.typeIntoWrongUserPasswordField();
         loginPage.clickOnLoginButton();
         loginPage.getWarningMessage();
-
     }
 
 }
