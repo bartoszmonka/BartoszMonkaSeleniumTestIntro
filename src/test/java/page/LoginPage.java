@@ -21,7 +21,7 @@ public class LoginPage {
     String userWrongEmail ="wrongpwd42@gmail.com";
     String userWrongPassword ="WrongWrong";
     String userInvalidEmail ="invalidEmail@@gmy.pl";
-    String emptyField =" ";
+    String emptyField ="";
 
     @FindBy(id = "email")
     private WebElement emailField;
@@ -32,13 +32,13 @@ public class LoginPage {
     @FindBy(id = "SubmitLogin")
     private WebElement signInButton;
 
-    @FindBy(css = "#center_column > div.alert.alert-danger > ol > li")
+    @FindBy(css = ".alert-danger li")
     private WebElement messageLabel;
 
-    @FindBy(css = "#center_column > h1")
+    @FindBy(css = ".page-heading")
     private WebElement myAccountLabel;
 
-    @FindBy(css = "#header > div.nav > div > div > nav > div:nth-child(2) > a")
+    @FindBy(className = "logout")
     private WebElement signOut;
 
 
