@@ -83,4 +83,18 @@ public class FailedLoginTests extends TestBase {
         loginPage.getEmailAddressIsRequiredMessage();
     }
 
+    @Severity(SeverityLevel.CRITICAL)
+    @Test(retryAnalyzer = RetryAnalyzer.class)
+    @Description("The steps of this test is using empty field email and empty field password" +
+            " check if warning message An email address required is displayed")
+    public void asUserTryToLogInWithEmptyEmailFieldAndEmptyPasswordField() {
+        DriverUtils.navigateToPage(LOGIN_URL);
+
+        LoginPage loginPage = new LoginPage();
+        loginPage.typeIntoUserEmailEmptyField();
+        loginPage.typeIntoEmptyFieldUserPassword();
+        loginPage.clickOnLoginButton();
+        loginPage.getEmailAddressIsRequiredMessage();
+    }
+
 }
