@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class WaitForElement {
 
     private static WebDriverWait getWebDriverWait() {
-        return new WebDriverWait(DriverManager.getWebDriver(), 10);
+        return new WebDriverWait(DriverManager.getWebDriver(), 20);
     }
 
     public static void waitUntilElementIsVisible(WebElement element){
@@ -16,9 +16,19 @@ public class WaitForElement {
         webDriverWait.until(ExpectedConditions.visibilityOf(element));
     }
 
+    public static void waitUntilElementIsInvisible(WebElement element){
+        WebDriverWait webDriverWait = getWebDriverWait();
+        webDriverWait.until(ExpectedConditions.invisibilityOf(element));
+    }
+
     public static void waitUntilElementIsClickable(WebElement element){
         WebDriverWait webDriverWait = getWebDriverWait();
         webDriverWait.until(ExpectedConditions.elementToBeClickable(element));
+    }
+
+    public static void waitUntilElementIsToBeSelected(WebElement element){
+        WebDriverWait webDriverWait = getWebDriverWait();
+        webDriverWait.until(ExpectedConditions.elementToBeSelected(element));
     }
 
 }
