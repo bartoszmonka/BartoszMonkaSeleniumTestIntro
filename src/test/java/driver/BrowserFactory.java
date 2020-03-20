@@ -30,28 +30,19 @@ public class BrowserFactory {
 
     public WebDriver getBrowser() {
 
-
         if (isRemoteRun) {
-
-
             DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
-
 
             switch (browserType) {
                 case CHROME:
-
-
                     ChromeOptions chromeOptions = new ChromeOptions();
                     desiredCapabilities.merge(chromeOptions);
                     return getRemoteWebDriver(desiredCapabilities);
                 case FIREFOX:
-
-
                     FirefoxOptions firefoxOptions = new FirefoxOptions();
                     desiredCapabilities.merge(firefoxOptions);
                     return getRemoteWebDriver(desiredCapabilities);
                 case IE:
-
                     InternetExplorerOptions internetExplorerOptions = new InternetExplorerOptions();
                     desiredCapabilities.merge(internetExplorerOptions);
                     return getRemoteWebDriver(desiredCapabilities);
@@ -59,10 +50,7 @@ public class BrowserFactory {
                     throw new IllegalStateException(MESSAGE_UNKNOWN_BROWSER);
             }
 
-
         } else {
-
-
             switch (browserType) {
                 case CHROME:
                     System.setProperty("webdriver.chrome.driver", LocalWebDriverProperties.getChromeWebDriverLocation());
@@ -76,7 +64,6 @@ public class BrowserFactory {
                 default:
                     throw new IllegalStateException(MESSAGE_UNKNOWN_BROWSER);
             }
-
         }
     }
 
