@@ -17,6 +17,13 @@
         </classes>
     </test>
 
+    <test name="Negative Login Tests IE">
+        <parameter name="browser" value="IE"/>
+        <classes>
+            <class name="tests.FailedLoginTests"/>
+        </classes>
+    </test>
+
     <test name="Positive Login Tests">
         <parameter name="browser" value="CHROME"/>
         <classes>
@@ -30,5 +37,13 @@
             <class name="tests.PositiveLoginTests"/>
         </classes>
     </test>
+
+    <test name="Positive Login Tests IE">
+        <parameter name="browser" value="IE"/>
+        <classes>
+            <class name="tests.PositiveLoginTests"/>
+        </classes>
+    </test>
+
 
 </suite>
