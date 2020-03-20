@@ -23,7 +23,6 @@ public class PropertiesLoader {
             inputStream = getClass().getClassLoader().getResourceAsStream(propertiesFileName);
 
             if (inputStream != null) {
-                //Ładujemy properties w formie InputStream do właściwego obiektu typu Properties
                 properties.load(inputStream);
                 logger.info("Successfully loaded properties for file: " + propertiesFileName);
             } else {
@@ -36,7 +35,6 @@ public class PropertiesLoader {
         } finally {
             closeResource(inputStream);
         }
-
         return properties;
     }
 
