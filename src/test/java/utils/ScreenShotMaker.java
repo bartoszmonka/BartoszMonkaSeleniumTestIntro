@@ -12,5 +12,4 @@ public class ScreenShotMaker {
         byte[] screenshotFile = ((TakesScreenshot) DriverManager.getWebDriver()).getScreenshotAs(OutputType.BYTES);
         return screenshotFile;
     }
-
 }
