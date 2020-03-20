@@ -42,7 +42,6 @@ public class TestListener implements ITestListener {
     public void onStart(ITestContext context) {
     }
 
-
     @Override
     public void onFinish(ITestContext context) {
     }
