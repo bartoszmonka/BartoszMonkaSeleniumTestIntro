@@ -2,46 +2,23 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="All Automation Practice Tests" parallel="tests" thread-count="2">
 
-    <test name="add New UserTests Tests C">
+    <test name="all tests Chrome">
         <parameter name="browser" value="CHROME"/>
         <classes>
+            <class name="tests.PositiveLoginTests"/>
+            <class name="tests.FailedLoginTests"/>
             <class name="tests.NewUserTests"/>
         </classes>
     </test>
 
-    <test name="add New UserTests Tests F">
+    <test name="all tests FIREFOX">
         <parameter name="browser" value="FIREFOX"/>
         <classes>
+            <class name="tests.PositiveLoginTests"/>
+            <class name="tests.FailedLoginTests"/>
             <class name="tests.NewUserTests"/>
         </classes>
     </test>
 
-    <test name="Negative Login Tests F">
-        <parameter name="browser" value="FIREFOX"/>
-        <classes>
-            <class name="tests.FailedLoginTests"/>
-        </classes>
-    </test>
-
-    <test name="Negative Login Tests C">
-        <parameter name="browser" value="CHROME"/>
-        <classes>
-            <class name="tests.FailedLoginTests"/>
-        </classes>
-    </test>
-
-    <test name="Positive Login Tests">
-        <parameter name="browser" value="CHROME"/>
-        <classes>
-            <class name="tests.PositiveLoginTests"/>
-        </classes>
-    </test>
-
-    <test name="Positive Login Tests F">
-        <parameter name="browser" value="FIREFOX"/>
-        <classes>
-            <class name="tests.PositiveLoginTests"/>
-        </classes>
-    </test>
 
 </suite>
