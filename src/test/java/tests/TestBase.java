@@ -15,8 +15,8 @@ import static navigation.ApplicationURLs.APPLICATION_URL;
 
 public class TestBase {
 
-
-@BeforeSuite
+    @Step("web driver manager browser setup")
+    @BeforeSuite
     public void beforeSuite(){
     WebDriverManager.chromedriver().setup();
     WebDriverManager.firefoxdriver().setup();
