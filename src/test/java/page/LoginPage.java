@@ -46,49 +46,49 @@ public class LoginPage {
         PageFactory.initElements(DriverManager.getWebDriver(), this);
     }
 
-    @Step("Type into User Name Field {username}")
+    @Step("Type into User Name Field")
     public void typeIntoUserEmailField() {
         WaitForElement.waitUntilElementIsVisible(emailField);
         emailField.sendKeys(userEmail);
         logger.info("Typed into user email Name Field {}", userEmail);
     }
 
-    @Step("Type into User Name Field {username}")
+    @Step("Type into User Name Field")
     public void typeIntoUserEmailEmptyField() {
         WaitForElement.waitUntilElementIsVisible(emailField);
         emailField.sendKeys(emptyField);
         logger.info("Typed into user email empty Field {}", emptyField);
     }
 
-    @Step("Type into User Name Field {username}")
+    @Step("Type into User Name Field")
     public void typeIntoWrongUserEmailNameField() {
         WaitForElement.waitUntilElementIsVisible(emailField);
         emailField.sendKeys(userWrongEmail);
         logger.info("Typed into wrong user email Field {}", userWrongEmail);
     }
 
-    @Step("Type into User Name Field {username}")
+    @Step("Type into User Name Field")
     public void typeIntoInvalidUserEmailNameField() {
         WaitForElement.waitUntilElementIsVisible(emailField);
         emailField.sendKeys(userInvalidEmail);
         logger.info("Typed into User Name Field {}", userInvalidEmail);
     }
 
-    @Step("Type into Password Field {password}")
+    @Step("Type into Password Field")
     public void typeIntoPasswordField() {
         passwordField.clear();
         passwordField.sendKeys(userPassword);
         logger.info("Typed into Password Field {}", userPassword);
     }
 
-    @Step("Type into Password Field {password}")
+    @Step("Type into Password Field")
     public void typeIntoWrongUserPasswordField() {
         passwordField.clear();
         passwordField.sendKeys(userWrongPassword);
         logger.info("Typed into Password Field {}", userWrongPassword);
     }
 
-    @Step("Type into EmptyField Password Field {password}")
+    @Step("Type into EmptyField Password Field")
     public void typeIntoEmptyFieldUserPassword() {
         passwordField.clear();
         passwordField.sendKeys(emptyField);
@@ -146,6 +146,7 @@ public class LoginPage {
         signOut.click();
         logger.info("Click Sign Out");
     }
+
     @Step("Check Sign In Button is Displayed in page")
     public void checkCorrectSignOut(){
         WaitForElement.waitUntilElementIsVisible(signInButton);
