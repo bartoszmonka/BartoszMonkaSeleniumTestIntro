@@ -2,6 +2,19 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="All Automation Practice Tests" parallel="tests" thread-count="2">
 
+    <test name="add New UserTests Tests C">
+        <parameter name="browser" value="CHROME"/>
+        <classes>
+            <class name="tests.NewUserTests"/>
+        </classes>
+    </test>
+
+    <test name="add New UserTests Tests F">
+        <parameter name="browser" value="FIREFOX"/>
+        <classes>
+            <class name="tests.NewUserTests"/>
+        </classes>
+    </test>
 
     <test name="Negative Login Tests F">
         <parameter name="browser" value="FIREFOX"/>
@@ -12,13 +25,6 @@
 
     <test name="Negative Login Tests C">
         <parameter name="browser" value="CHROME"/>
-        <classes>
-            <class name="tests.FailedLoginTests"/>
-        </classes>
-    </test>
-
-    <test name="Negative Login Tests IE">
-        <parameter name="browser" value="IE"/>
         <classes>
             <class name="tests.FailedLoginTests"/>
         </classes>
@@ -37,13 +43,5 @@
             <class name="tests.PositiveLoginTests"/>
         </classes>
     </test>
-
-    <test name="Positive Login Tests IE">
-        <parameter name="browser" value="IE"/>
-        <classes>
-            <class name="tests.PositiveLoginTests"/>
-        </classes>
-    </test>
-
 
 </suite>
