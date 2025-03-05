@@ -15,12 +15,12 @@ public class PropertiesLoader {
     public Properties getPropertiesFromFile(String propertiesFileName) {
 
         InputStream inputStream = null;
-
         Properties properties = new Properties();
         try {
             logger.info("Trying to load properties with file name: " + propertiesFileName);
 
             inputStream = getClass().getClassLoader().getResourceAsStream(propertiesFileName);
+
 
             if (inputStream != null) {
                 properties.load(inputStream);
@@ -35,6 +35,7 @@ public class PropertiesLoader {
         } finally {
             closeResource(inputStream);
         }
+
         return properties;
     }
 
