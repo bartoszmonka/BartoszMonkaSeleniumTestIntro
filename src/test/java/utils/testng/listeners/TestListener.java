@@ -7,6 +7,7 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 import utils.ScreenShotMaker;
 
+
 public class TestListener implements ITestListener {
 
     private Logger logger = LogManager.getLogger(TestListener.class);

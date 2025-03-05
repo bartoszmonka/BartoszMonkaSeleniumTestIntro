@@ -1,24 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="All Automation Practice Tests" parallel="tests" thread-count="2">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="All Tests" parallel="tests" thread-count="1">
 
-    <test name="all tests Chrome">
-        <parameter name="browser" value="CHROME"/>
+    <listeners>
+        <listener class-name="utils.testng.listeners.TestListener"/>
+        <listener class-name="utils.testng.listeners.AnnotationTransformer"/>
+    </listeners>
+
+    <test name="Negative Login Tests">
+        <parameter name="browser" value="FIREFOX"/>
         <classes>
-            <class name="tests.PositiveLoginTests"/>
             <class name="tests.FailedLoginTests"/>
-            <class name="tests.NewUserTests"/>
         </classes>
     </test>
 
-    <test name="all tests FIREFOX">
+    <test name="Positive Login Tests">
         <parameter name="browser" value="FIREFOX"/>
         <classes>
             <class name="tests.PositiveLoginTests"/>
-            <class name="tests.FailedLoginTests"/>
-            <class name="tests.NewUserTests"/>
         </classes>
     </test>
 
+    <test name="Header Tests">
+        <parameter name="browser" value="FIREFOX"/>
+        <classes>
+            <class name="tests.HeaderTests"/>
+        </classes>
+    </test>
 
 </suite>

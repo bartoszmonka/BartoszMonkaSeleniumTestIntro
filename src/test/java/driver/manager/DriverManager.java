@@ -11,8 +11,8 @@ import static driver.BrowserType.FIREFOX;
 
 public class DriverManager {
 
-    private static ThreadLocal<WebDriver> webDriverThreadLocal = new ThreadLocal<>();
-    private static ThreadLocal<BrowserType> browserTypeThreadLocal = new ThreadLocal<>();
+    private static final ThreadLocal<WebDriver> webDriverThreadLocal = new ThreadLocal<>();
+    private static final ThreadLocal<BrowserType> browserTypeThreadLocal = new ThreadLocal<>();
 
     private DriverManager() {
     }
