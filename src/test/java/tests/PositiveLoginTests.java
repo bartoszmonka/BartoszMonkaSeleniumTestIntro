@@ -19,7 +19,6 @@ public class PositiveLoginTests extends TestBase {
             " and check if the logout option is displayed after successful login.")
     public void asUserLoginUsingValidLoginAndPassword() {
         DriverUtils.navigateToPage(LOGIN_URL);
-
         new LoginPage()
                 .typeIntoUserNameField("vjlhmoidwyruiiibmf@ytnhy.com")
                 .typeIntoPasswordField("darg#42Df@")

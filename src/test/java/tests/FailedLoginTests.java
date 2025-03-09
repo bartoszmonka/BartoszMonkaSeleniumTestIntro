@@ -19,7 +19,6 @@ public class FailedLoginTests extends TestBase {
             " and check if warning message Your email or password is incorrect!")
     public void asUserTryToLogInWithIncorrectLoginAndPassword() {
         DriverUtils.navigateToPage(LOGIN_URL);
-
         new LoginPage()
                 .typeIntoUserNameField("admin@automation.com")
                 .typeIntoPasswordField("admin123")

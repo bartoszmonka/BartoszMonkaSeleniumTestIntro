@@ -21,7 +21,6 @@ public class TestBase {
         Properties propertiesFromFile = propertiesLoader.getPropertiesFromFile("configuration.properties");
         ConfigurationProperties.setProperties(propertiesFromFile);
     }
-
     @Step("Setting up browser to: {browserType} and navigating to Home Page")
     @Parameters("browser")
     @BeforeMethod
@@ -31,11 +30,9 @@ public class TestBase {
         DriverUtils.setInitialConfiguration();
         DriverUtils.navigateToPage(APPLICATION_URL);
     }
-
     @Step("Disposing browser")
     @AfterMethod
     public void afterTest() {
         DriverManager.disposeDriver();
     }
-
 }
