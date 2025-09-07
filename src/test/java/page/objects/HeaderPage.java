@@ -27,7 +27,6 @@ public class HeaderPage extends BasePage {
     @FindBy(css = "i[class='fa fa-trash-o'")
     private WebElement deleteAccount;
 
-
     @Step("Assert that element Log out is displayed")
     public void assertLogOutIsDisplayed() {
         log().info("Checking Log out is displayed");
@@ -60,11 +59,10 @@ public class HeaderPage extends BasePage {
     }
 
     @Step("Assert that Sign Up icon is displayed")
-    public HeaderPage assertSignUpIsDisplayed() {
+    public void assertSignUpIsDisplayed() {
         log().info("Checking Sign Up icon is displayed");
         WaitForElement.waitUntilElementIsVisible(signUp);
         assertThat(signUp).isDisplayed();
-        return this;
     }
 
     @Step("Assert that Delete Account icon is displayed")
