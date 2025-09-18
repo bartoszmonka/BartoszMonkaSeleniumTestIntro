@@ -12,54 +12,30 @@ import java.util.List;
 
 public class DriverEventListener implements WebDriverListener {
 
-    private static Logger logger = LogManager.getLogger(DriverEventListener.class);
+    private static final Logger logger = LogManager.getLogger(DriverEventListener.class);
 
     @Override
     public void beforeFindElement(WebDriver driver, By locator) {
         WebDriverListener.super.beforeFindElement(driver, locator);
-        logger.info("Trying to find WebElement with locator " + locator.toString());
-    }
-
-    @Override
-    public void afterFindElement(WebDriver driver, By locator, WebElement result) {
-        WebDriverListener.super.afterFindElement(driver, locator, result);
-        logger.info("Found WebElement with locator " + locator.toString());
+        logger.info("Trying to find WebElement with locator {}", locator.toString());
     }
 
     @Override
     public void beforeFindElements(WebDriver driver, By locator) {
         WebDriverListener.super.beforeFindElements(driver, locator);
-        logger.info("Trying to find WebElement list with locator " + locator.toString());
+        logger.info("Trying to find WebElement list with locator {}", locator.toString());
     }
 
     @Override
     public void afterFindElements(WebDriver driver, By locator, List<WebElement> result) {
         WebDriverListener.super.afterFindElements(driver, locator, result);
-        logger.info("Found WebElements list with locator " + locator.toString());
-    }
-
-    @Override
-    public void beforeFindElement(WebElement element, By locator) {
-        WebDriverListener.super.beforeFindElement(element, locator);
-        logger.info("Trying to find WebElement with locator " + locator.toString());
+        logger.info("Found WebElements list with locator {}", locator.toString());
     }
 
     @Override
     public void afterFindElement(WebElement element, By locator, WebElement result) {
         WebDriverListener.super.afterFindElement(element, locator, result);
-        logger.info("Found WebElement with locator " + locator.toString());
-    }
-
-    @Override
-    public void beforeFindElements(WebElement element, By locator) {
-        WebDriverListener.super.beforeFindElements(element, locator);
-        logger.info("Trying to find WebElement list with locator " + locator.toString());
-    }
-
-    @Override
-    public void afterFindElements(WebElement element, By locator, List<WebElement> result) {
-        WebDriverListener.super.afterFindElements(element, locator, result);
-        logger.info("Found WebElements list with locator " + locator.toString());
+        logger.info("Found WebElement with locator {}", locator.toString());
     }
 
     @Override
@@ -71,7 +47,7 @@ public class DriverEventListener implements WebDriverListener {
     @Override
     public void afterClear(WebElement element) {
         WebDriverListener.super.afterClear(element);
-        logger.info("Cleared WebElement " + element);
+        logger.info("Cleared WebElement {}", element);
     }
 
     @Override
@@ -90,9 +66,9 @@ public class DriverEventListener implements WebDriverListener {
     public void beforeSendKeys(WebElement element, CharSequence... keysToSend) {
         WebDriverListener.super.beforeSendKeys(element, keysToSend);
         if (keysToSend == null) {
-            logger.info("Trying to clear field with location " + element.getLocation());
+            logger.info("Trying to clear field with location {}", element.getLocation());
         } else {
-            logger.info("Trying to type text " + Arrays.toString(keysToSend));
+            logger.info("Trying to type text {}", Arrays.toString(keysToSend));
         }
     }
 
@@ -100,9 +76,9 @@ public class DriverEventListener implements WebDriverListener {
     public void afterSendKeys(WebElement element, CharSequence... keysToSend) {
         WebDriverListener.super.afterSendKeys(element, keysToSend);
         if (keysToSend == null) {
-            logger.info("Cleared field with location " + element.getLocation());
+            logger.info("Cleared field with location {}", element.getLocation());
         } else {
-            logger.info("Typed text " + Arrays.toString(keysToSend));
+            logger.info("Typed text {}", Arrays.toString(keysToSend));
         }
     }
 }

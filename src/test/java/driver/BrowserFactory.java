@@ -18,9 +18,9 @@ public class BrowserFactory {
 
     private static final String MESSAGE_UNKNOWN_BROWSER = "Unknown browser type! Please check your configuration";
 
-    private BrowserType browserType;
+    private final BrowserType browserType;
 
-    private boolean isRemoteRun;
+    private final boolean isRemoteRun;
 
     public BrowserFactory(BrowserType browserType, boolean isRemoteRun) {
         this.browserType = browserType;
@@ -55,16 +55,12 @@ public class BrowserFactory {
 
         } else {
 
-            switch (browserType) {
-                case CHROME:
-                    return new ChromeDriver();
-                case FIREFOX:
-                    return new FirefoxDriver();
-                case EDGE:
-                    return new EdgeDriver();
-                default:
-                    throw new IllegalStateException(MESSAGE_UNKNOWN_BROWSER);
-            }
+            return switch (browserType) {
+                case CHROME -> new ChromeDriver();
+                case FIREFOX -> new FirefoxDriver();
+                case EDGE -> new EdgeDriver();
+                default -> throw new IllegalStateException(MESSAGE_UNKNOWN_BROWSER);
+            };
 
         }
     }

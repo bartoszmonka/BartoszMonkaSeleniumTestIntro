@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 
 public class AssertWebElement extends AbstractAssert<AssertWebElement, WebElement> {
 
-    private Logger logger = LogManager.getLogger(AssertWebElement.class);
+    private final Logger logger = LogManager.getLogger(AssertWebElement.class);
 
     public AssertWebElement(WebElement webElement) {
         super(webElement, AssertWebElement.class);
@@ -28,8 +28,8 @@ public class AssertWebElement extends AbstractAssert<AssertWebElement, WebElemen
         return this;
     }
 
-    public AssertWebElement hasText(String expectedTextValue) {
-        logger.info("Checking if WebElement has text: " + expectedTextValue);
+    public void hasText(String expectedTextValue) {
+        logger.info("Checking if WebElement has text: {}", expectedTextValue);
         isNotNull();
 
         String actualElementText = actual.getText();
@@ -38,7 +38,5 @@ public class AssertWebElement extends AbstractAssert<AssertWebElement, WebElemen
         }
 
         logger.info("WebElement had expected text!");
-        return this;
     }
-
 }

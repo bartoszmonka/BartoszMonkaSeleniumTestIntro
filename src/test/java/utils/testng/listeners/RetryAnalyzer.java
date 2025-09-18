@@ -9,7 +9,7 @@ public class RetryAnalyzer implements IRetryAnalyzer {
 
     private static final int MAX_NUMBER_OF_RETRIES = 2;
     private int count = 0;
-    private Logger logger = LogManager.getLogger(RetryAnalyzer.class);
+    private final Logger logger = LogManager.getLogger(RetryAnalyzer.class);
 
     @Override
     public boolean retry(ITestResult iTestResult) {

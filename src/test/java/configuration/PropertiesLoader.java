@@ -10,21 +10,21 @@ import java.util.Properties;
 
 public class PropertiesLoader {
 
-    private Logger logger = LogManager.getLogger(PropertiesLoader.class);
+    private final Logger logger = LogManager.getLogger(PropertiesLoader.class);
 
     public Properties getPropertiesFromFile(String propertiesFileName) {
 
         InputStream inputStream = null;
         Properties properties = new Properties();
         try {
-            logger.info("Trying to load properties with file name: " + propertiesFileName);
+            logger.info("Trying to load properties with file name: {}", propertiesFileName);
 
             inputStream = getClass().getClassLoader().getResourceAsStream(propertiesFileName);
 
 
             if (inputStream != null) {
                 properties.load(inputStream);
-                logger.info("Successfully loaded properties for file: " + propertiesFileName);
+                logger.info("Successfully loaded properties for file: {}", propertiesFileName);
             } else {
                 throw new FileNotFoundException("Property file '" + propertiesFileName + "' not found in the classpath");
             }
@@ -33,6 +33,7 @@ public class PropertiesLoader {
             e.printStackTrace();
             throw new RuntimeException("Cannot load properties due to IOException!");
         } finally {
+            assert inputStream != null;
             closeResource(inputStream);
         }
 

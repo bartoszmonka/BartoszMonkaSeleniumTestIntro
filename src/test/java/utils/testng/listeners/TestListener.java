@@ -10,11 +10,11 @@ import utils.ScreenShotMaker;
 
 public class TestListener implements ITestListener {
 
-    private Logger logger = LogManager.getLogger(TestListener.class);
+    private final Logger logger = LogManager.getLogger(TestListener.class);
 
     @Override
     public void onTestStart(ITestResult result) {
-        logger.info("Starting test: " + result.getName());
+        logger.info("Starting test: {}", result.getName());
     }
 
     @Override
@@ -31,12 +31,6 @@ public class TestListener implements ITestListener {
     @Override
     public void onTestSkipped(ITestResult result) {
         logger.info("Test {} skipped!", result.getName());
-    }
-
-    @Override
-    public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
-        logger.info("Test {} failed!", result.getName());
-        ScreenShotMaker.makeScreenShot();
     }
 
     @Override
