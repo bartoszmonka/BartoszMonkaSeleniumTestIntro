@@ -1,6 +1,7 @@
 package tests;
 
 import driver.manager.DriverUtils;
+import io.github.cdimascio.dotenv.Dotenv;
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
@@ -18,10 +19,14 @@ public class PositiveLoginTests extends TestBase {
     @Description("This test verifies the login functionality by entering a valid username and password," +
             " and check if the logout option is displayed after successful login.")
     public void asUserLoginUsingValidLoginAndPassword() {
+        Dotenv dotenv = Dotenv.configure().filename(".env.test").load();
+        String username = dotenv.get("VALID_LOGIN_USERNAME");
+        String password = dotenv.get("VALID_LOGIN_PASSWORD");
+
         DriverUtils.navigateToPage(LOGIN_URL);
         new LoginPage()
-                .typeIntoUserNameField("vjlhmoidwyruiiibmf@ytnhy.com")
-                .typeIntoPasswordField("darg#42Df@")
+                .typeIntoUserNameField(username)
+                .typeIntoPasswordField(password)
                 .clickOnLoginButton()
                 .assertLogOutIsDisplayed();
     }
