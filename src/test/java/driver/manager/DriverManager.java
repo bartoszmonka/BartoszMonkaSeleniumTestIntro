@@ -44,10 +44,9 @@ public class DriverManager {
     }
 
     public static void disposeDriver() {
-        webDriverThreadLocal.get().close();
-
-        if (!browserTypeThreadLocal.get().equals(FIREFOX)) {
-            webDriverThreadLocal.get().quit();
+        WebDriver driver = webDriverThreadLocal.get();
+        if (driver != null) {
+            driver.quit();
         }
 
         webDriverThreadLocal.remove();
